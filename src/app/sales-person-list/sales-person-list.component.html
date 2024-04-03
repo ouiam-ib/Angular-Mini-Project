@@ -4,13 +4,18 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Number of sales </th>
+            <th>Met quota?</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let person of list">
             <td>{{person.nom}}</td>
             <td>{{person.prenom}}</td>
-            <td>{{person.salesVolume}}</td>
+            <td>{{person.salesVolume | currency:'USD'}}</td>
+            <td>
+                <div *ngIf = "person.salesVolume>2000; else MyElseBlock">Yes</div>
+                <ng-template #MyElseBlock>No</ng-template>
+            </td>
         </tr> 
     </tbody>
 </table>

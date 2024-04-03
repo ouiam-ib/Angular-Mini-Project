@@ -8,9 +8,9 @@ import { SalesPerson } from './sales-person';
 })
 export class SalesPersonListComponent {
   list: SalesPerson[]=[
-    new SalesPerson("AA","AA",1),
-    new SalesPerson("BB","BB",2),
-    new SalesPerson("CC","DD",2)
+    new SalesPerson("AA","AA",1000),
+    new SalesPerson("BB","BB",2000),
+    new SalesPerson("CC","DD",3000)
   ];
  
 
